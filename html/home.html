@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full-Width Slider</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+      <!-- Navbar -->
+      <nav class="bg-white p-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 items-center max-w-7xl mx-auto">
+            
+            <!-- Column 1: Exclusive (Hidden on Mobile) -->
+            <div class="flex justify-center md:justify-start items-center">
+                <i class="fas fa-building text-6xl"></i>
+                <h1 class="hidden sm:block text-2xl font-bold text-blue-500">Exclusive</h1>
+            </div>
+
+            <!-- Column 2: Navigation Links (Hidden on Mobile) -->
+            <div class="hidden md:flex justify-center space-x-6">
+                <a href="#" class="text-gray-700 text-lg font-medium no-underline">Home</a>
+                <a href="#" class="text-gray-700 text-lg font-medium no-underline">Shop</a>
+                <a href="#" class="text-gray-700 text-lg font-medium no-underline">Contact</a>
+                <a href="#" class="text-gray-700 text-lg font-medium no-underline">About</a>
+            </div>
+
+            <!-- Column 3: Search Bar + Icons -->
+            <div class="flex justify-between md:justify-end items-center space-x-4">
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="md:hidden text-gray-700 text-2xl focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- Search Bar -->
+                <div class="relative w-full max-w-xs">
+                    <input type="text" placeholder="Search..." 
+                        class="w-full border border-gray-300 rounded-full px-4 py-2 pl-10 focus:outline-none">
+                    <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500"></i>
+                </div>
+                
+                <!-- Icons -->
+                <i class="far fa-heart text-2xl text-gray-600"></i>  
+                <i class="fas fa-shopping-cart text-2xl text-gray-600"></i> 
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Dropdown (Initially Hidden) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white p-4 space-y-2 text-center">
+            <a href="#" class="block text-gray-700 text-lg font-medium">Home</a>
+            <a href="#" class="block text-gray-700 text-lg font-medium">Shop</a>
+            <a href="#" class="block text-gray-700 text-lg font-medium">Contact</a>
+            <a href="#" class="block text-gray-700 text-lg font-medium">About</a>
+        </div>
+    </nav>
+
+    
+
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-8">
+
+            <!-- List Section -->
+            <div class="flex flex-col space-y-4">
+                <p class="text-lg font-medium">Item 1 <i class="fas fa-chevron-right float-right"></i></p>
+                <p class="text-lg font-medium">Item 2 <i class="fas fa-chevron-right float-right"></i></p>
+                <p class="text-lg font-medium">Item 3</p>
+                <p class="text-lg font-medium">Item 4</p>
+                <p class="text-lg font-medium">Item 5</p>
+                <p class="text-lg font-medium">Item 6</p>
+            </div>
+
+            <!-- Full-Width Slider -->
+            <div class="w-full overflow-hidden relative rounded-lg shadow-lg shadow-blue-500">
+                <div class="slider flex transition-transform duration-1000 ease-in-out">
+                    <img src="../images/slider-1.jpg" class="w-full h-96 object-cover">
+                    <img src="../images/slider-2.avif" class="w-full h-96 object-cover">
+                    <img src="../images/slider-3.jpg" class="w-full h-96 object-cover">
+                    <img src="../images/slider-4.jpg" class="w-full h-96 object-cover">
+                    <img src="../images/slider-5.jpg" class="w-full h-96 object-cover">
+                    <img src="../images/slider-6.jpg" class="w-full h-96 object-cover">
+                </div>
+
+                <!-- Left Arrow -->
+                <button id="prev" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black text-white p-2 rounded-full opacity-50 hover:opacity-100 hidden md:block">
+                    <i class="fas fa-chevron-left text-2xl"></i>
+                </button>
+
+                <!-- Right Arrow -->
+                <button id="next" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black text-white p-2 rounded-full opacity-50 hover:opacity-100 hidden md:block">
+                    <i class="fas fa-chevron-right text-2xl"></i>
+                </button>
+
+                <!-- Dots -->
+                <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                    <span class="dot w-4 h-4 bg-gray-400 rounded-full cursor-pointer"></span>
+                    <span class="dot w-4 h-4 bg-gray-400 rounded-full cursor-pointer"></span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- JavaScript for Toggle -->
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+    </script>
+
+    <script>
+        let index = 0;
+        const slides = document.querySelector(".slider");
+        const slideImages = slides.children; // Get all the images in the slider
+        const totalSlides = slideImages.length;
+        const dots = document.querySelectorAll(".dot");
+
+        function updateSlider() {
+            // Adjust the transform to show one image at a time
+            slides.style.transform = `translateX(-${index * 100}%)`;
+            dots.forEach((dot, i) => {
+                dot.classList.toggle("bg-gray-900", i === index);
+            });
+        }
+
+        function nextSlide() {
+            index = (index + 1) % totalSlides;
+            updateSlider();
+        }
+
+        function prevSlide() {
+            index = (index - 1 + totalSlides) % totalSlides;
+            updateSlider();
+        }
+
+        // Event listeners for navigation
+        document.getElementById("next").addEventListener("click", nextSlide);
+        document.getElementById("prev").addEventListener("click", prevSlide);
+
+        // Auto slide every 2 seconds
+        setInterval(nextSlide, 2000);
+    </script>
+
+</body>
+</html>
