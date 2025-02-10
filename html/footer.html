@@ -4,10 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Footer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <footer class="bg-gray-900 text-white p-8">
+    <nav class="bg-white p-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 items-center max-w-7xl mx-auto">
+            
+            <!-- Column 1: Exclusive (Hidden on Mobile) -->
+            <div class="flex justify-center md:justify-start items-center">
+                <i class=" hidden sm:block fas fa-building text-6xl"></i>
+                <h1 class="hidden sm:block text-2xl font-bold text-blue-500">Exclusive</h1>
+            </div>
+
+            <!-- Column 2: Navigation Links (Hidden on Mobile) -->
+            <div class="hidden md:flex justify-center space-x-6">
+                <a href="#" class="text-gray-700 text-lg font-medium no-underline">Home</a>
+                <a href="contact.html" class="text-gray-700 text-lg font-medium no-underline">Shop</a>
+                <a href="carts.html" class="text-gray-700 text-lg font-medium no-underline">Contact</a>
+                <a href="navbar.html" class="text-gray-700 text-lg font-medium no-underline">About</a>
+            </div>
+
+            <!-- Column 3: Search Bar + Icons -->
+            <div class="flex justify-between md:justify-end items-center space-x-4">
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="md:hidden text-gray-700 text-2xl focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- Search Bar -->
+                <div class="relative w-full max-w-xs">
+                    <input type="text" placeholder="Search..." 
+                        class="w-full border border-gray-300 rounded-full px-4 py-2 pl-10 focus:outline-none">
+                    <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500"></i>
+                </div>
+                
+                <!-- Icons -->
+                <i class="far fa-heart text-2xl text-gray-600"></i>  
+                <i class="fas fa-shopping-cart text-2xl text-gray-600"></i> 
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Dropdown (Initially Hidden) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white p-4 space-y-2 text-center">
+            <a href="#" class="block text-gray-700 text-lg font-medium">Home</a>
+            <a href="#" class="block text-gray-700 text-lg font-medium">Shop</a>
+            <a href="#" class="block text-gray-700 text-lg font-medium">Contact</a>
+            <a href="#" class="block text-gray-700 text-lg font-medium">About</a>
+        </div>
+    </nav>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector(".nav-links").classList.toggle("active");
+        }
+    </script>
+ <section class="bg-gray-900 text-white p-8">
+
         
             <div class="w-full lg:w-100 space-y-6">
                 <!-- Image Section -->
@@ -19,9 +72,10 @@
             <!-- Left Section -->
             
                     <!-- Text Section -->
-                    <div class="space-y-4 p-1">
-                        <p>Ready to personalize your things???</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore praesentium voluptas incidunt omnis aliquid quod totam architecto accusamus quam? Nihil?Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio mollitia neque aliquid dolorem voluptatum, pariatur nostrum provident id aperiam. Unde?</p>
+                    <div class="space-y-6 w-100% h-60 >
+                        <p class="mt-4 pl-3 text-3xl">Ready to personalize your things???</p>
+                        <p class="p-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore praesentium voluptas incidunt omnis aliquid quod totam architecto accusamus quam? Nihil?Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio mollitia neque aliquid dolorem voluptatum, pariatur nostrum provident id aperiam. Unde? Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi hic accusantium labore. Tempore quia porro neque natus minima dolorem debitis officia aperiam fugit, corrupti nobis quasi reiciendis, quaerat iure perspiciatis......</p>
+                        <button class=" border border-gray-700 shadow-lg shadow-blue-300 rounded-lg text-black-600 p-4 mb-4">see more <i class="fa-solid fa-arrow-right"></i></button>
                     </div>
                 </div>
                 <!-- Form Section -->
@@ -36,6 +90,21 @@
                 </div>
             </div>
         </div>
-    </footer>
+        <div class="flex flex-col md:flex-row justify-between items-center border-t border-gray-700 mt-6 pt-4">
+            <div class="flex items-center gap-2">
+                <i class="fas fa-copyright"></i>
+                <span>2024 Your Company</span>
+            </div>
+            <div class="flex space-x-4">
+                <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" class="bg-blue-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-blue-700">
+                <i class="fas fa-arrow-up"></i> Go Top
+            </button>
+        </div>
+ </section>
 </body>
 </html>

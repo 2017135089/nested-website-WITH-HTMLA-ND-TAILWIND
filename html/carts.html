@@ -5,80 +5,156 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Carts</title>
     <link rel="stylesheet" href="../css/carts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="container">
-        <div class="cart">
-            <img src="../images and logos/New folder/christopher-gower-m_HRfLhgABo-unsplash.jpg" alt="Project 1">
-            <h3>Project 1</h3>
-            <p class="price">Estimated: $1000 - $5000</p>
-            <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur repellat quo molestias odit, officia optio nam blanditiis nesciunt esse suscipit cum animi necessitatibus beatae aperiam, officiis mollitia! Consectetur, repellat dicta?</p>
-            <button class="see-more">See More →</button>
+<body class="pt-20"> <!-- Adjust padding-top to match navbar height -->
+    
+    <!-- Navbar -->
+    <nav class="w-full bg-white p-4 fixed top-0 left-0 z-50 shadow-md">
+        <div class="grid grid-cols-1 md:grid-cols-3 items-center max-w-7xl mx-auto">
+            
+            <!-- Column 1: Exclusive (Hidden on Mobile) -->
+            <div class="flex justify-center md:justify-start items-center">
+                <i class="hidden sm:block fas fa-building text-6xl"></i>
+                <h1 class="hidden sm:block text-2xl font-bold text-blue-500">Exclusive</h1>
+            </div>
+
+            <!-- Column 2: Navigation Links -->
+            <div class="hidden md:flex justify-center space-x-6">
+                <a href="#" class="text-gray-700 text-lg font-medium no-underline">Home</a>
+                <a href="contact.html" class="text-gray-700 text-lg font-medium no-underline">Shop</a>
+                <a href="carts.html" class="text-gray-700 text-lg font-medium no-underline">Contact</a>
+                <a href="navbar.html" class="text-gray-700 text-lg font-medium no-underline">About</a>
+            </div>
+
+            <!-- Column 3: Search Bar + Icons -->
+            <div class="flex justify-between md:justify-end items-center space-x-4">
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="md:hidden text-gray-700 text-2xl focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- Search Bar -->
+                <div class="relative w-full max-w-xs">
+                    <input type="text" placeholder="Search..." 
+                        class="w-full border border-gray-300 rounded-full px-4 py-2 pl-10 focus:outline-none">
+                    <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500"></i>
+                </div>
+                
+                <!-- Icons -->
+                <i class="far fa-heart text-2xl text-gray-600"></i>  
+                <i class="fas fa-shopping-cart text-2xl text-gray-600"></i> 
+            </div>
         </div>
-        <div class="cart">
-            <img src="../images and logos/New folder/istockphoto-1076517644-612x612.jpg" alt="Project 2">
-            <h3>Project 2</h3>
-            <p class="price">Estimated: $2000 - $6000</p>
-            <p class="details">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad nostrum illo beatae? Tempora facilis labore facere aliquid distinctio aut, cupiditate consequuntur corporis aspernatur quibusdam quo sed temporibus neque ducimus maiores.</p>
-            <button class="see-more">See More →</button>
+
+        <!-- Mobile Navigation Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white p-4 space-y-2 text-center">
+            <a href="#" class="block text-gray-700 text-lg font-medium">Home</a>
+            <a href="#" class="block text-gray-700 text-lg font-medium">Shop</a>
+            <a href="#" class="block text-gray-700 text-lg font-medium">Contact</a>
+            <a href="#" class="block text-gray-700 text-lg font-medium">About</a>
         </div>
-        <div class="cart">
-            <img src="../images and logos/New folder/istockphoto-1136637517-612x612.jpg" alt="Project 3">
-            <h3>Project 3</h3>
-            <p class="price">Estimated: $3000 - $7000</p>
-            <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic et possimus, consequatur eveniet est iure fugiat repudiandae rem esse nihil laborum aperiam mollitia error iusto reiciendis, deleniti temporibus quas corporis?</p>
-            <button class="see-more">See More →</button>
-        </div>
-        <div class="cart">
-            <img src="../images and logos/New folder/istockphoto-1166242152-612x612.jpg" alt="Project 4">
-            <h3>Project 4</h3>
-            <p class="price">Estimated: $4000 - $8000</p>
-            <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic non consequatur tempora est consequuntur vitae sequi fugiat, quasi sapiente praesentium animi aperiam veniam laudantium? Ipsa tempora sit dolorem provident aspernatur.</p>
-            <button class="see-more">See More →</button>
-        </div>
-        <div class="cart">
-            <img src="../images and logos/New folder/istockphoto-1253430957-2048x2048.jpg" alt="Project 5">
-            <h3>Project 5</h3>
-            <p class="price">Estimated: $5000 - $9000</p>
-            <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor praesentium illum atque, dicta in sit veritatis accusantium aliquam facere! Aut explicabo inventore iusto nihil fuga perferendis officia, minus cumque. Necessitatibus!</p>
-            <button class="see-more">See More →</button>
-        </div>
-        <!-- Repeat for images up to 20 -->
-        <div class="cart">
-            <img src="../images and logos/New folder/istockphoto-1469706272-612x612.webp" alt="Project 6">
-            <h3>Project 6</h3>
-            <p class="price">Estimated: $6000 - $10000</p>
-            <p class="details">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam, ipsum mollitia nostrum accusantium unde veritatis earum quia aperiam pariatur ducimus architecto repudiandae sapiente deleniti quisquam suscipit culpa soluta ea iusto!</p>
-            <button class="see-more">See More →</button>
-        </div>
-        <div class="cart">
-            <img src="../images and logos/New folder/istockphoto-1504929133-612x612.jpg" alt="Project 7">
-            <h3>Project 7</h3>
-            <p class="price">Estimated: $7000 - $11000</p>
-            <p class="details">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur illo velit quos ut aperiam architecto, minima optio vitae est a hic, fugit exercitationem at assumenda, dolores id dolore expedita nesciunt.</p>
-            <button class="see-more">See More →</button>
-        </div>
-        <div class="cart">
-            <img src="../images and logos/New folder/istockphoto-657449394-612x612.jpg" alt="Project 8">
-            <h3>Project 8</h3>
-            <p class="price">Estimated: $8000 - $12000</p>
-            <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis perferendis similique incidunt, autem nesciunt necessitatibus deserunt sint quo aliquid consectetur rem dolores magnam sunt vel voluptatibus molestiae, laborum enim accusamus.</p>
-            <button class="see-more">See More →</button>
-        </div>
-        <div class="cart">
-            <img src="../images and logos/New folder/istockphoto-657449394-612x612.jpg" alt="Project 9">
-            <h3>Project 9</h3>
-            <p class="price">Estimated: $9000 - $13000</p>
-            <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis temporibus possimus consectetur sapiente perspiciatis, magni fugiat ratione rerum iusto officia voluptatibus itaque, veritatis facere quaerat dolores totam, deserunt ut cum.</p>
-            <button class="see-more">See More →</button>
-        </div>
-        <div class="cart">
-            <img src="../images and logos/New folder/photo-1454165804606-c3d57bc86b40.avif" alt="Project 10">
-            <h3>Project 10</h3>
-            <p class="price">Estimated: $10000 - $14000</p>
-            <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit excepturi ut aliquid pariatur debitis. Nostrum quibusdam, repellat sit sed cupiditate quasi ratione perferendis cum. Nisi error officia tempora ex reiciendis?</p>
-            <button class="see-more">See More →</button>
+    </nav>
+
+    <!-- Project Carts -->
+    <div class="container mt-10 px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="cart bg-white shadow-md p-4 rounded-lg">
+                <img src="../images and logos/New folder/christopher-gower-m_HRfLhgABo-unsplash.jpg" alt="Project 1">
+                <h3>Project 1</h3>
+                <p class="price">Estimated: $1000 - $5000</p>
+                <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugiat facere facilis temporibus, exercitationem sapiente officia adipisci eos obcaecati voluptate provident velit qui molestiae similique distinctio quam iusto porro voluptatum.</p>
+                <button class="see-more bg-blue-500 text-white px-4 py-2 rounded">See More →</button>
+            </div>
+
+            <div class="cart bg-white shadow-md p-4 rounded-lg">
+                <img src="../images and logos/New folder/istockphoto-1076517644-612x612.jpg" alt="Project 2">
+                <h3>Project 2</h3>
+                <p class="price">Estimated: $2000 - $6000</p>
+                <p class="details">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, ducimus numquam quasi beatae repellat natus quo exercitationem. Sed asperiores saepe officia incidunt sint nihil tenetur delectus, iste facilis ipsam! Quasi?</p>
+                <button class="see-more bg-blue-500 text-white px-4 py-2 rounded">See More →</button>
+            </div>
+
+            <div class="cart bg-white shadow-md p-4 rounded-lg">
+                <img src="../images and logos/New folder/istockphoto-1136637517-612x612.jpg" alt="Project 3">
+                <h3>Project 3</h3>
+                <p class="price">Estimated: $3000 - $7000</p>
+                <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam quaerat nam tempore debitis recusandae dolore odit ipsum veniam sapiente? Eius doloribus aliquid iste facere consequuntur voluptas, dignissimos ut voluptatum quo!</p>
+                <button class="see-more bg-blue-500 text-white px-4 py-2 rounded">See More →</button>
+            </div>
+            <div class="cart bg-white shadow-md p-4 rounded-lg">
+                <img src="../images and logos/New folder/istockphoto-1136637517-612x612.jpg" alt="Project 3">
+                <h3>Project 3</h3>
+                <p class="price">Estimated: $3000 - $7000</p>
+                <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis veritatis eaque excepturi assumenda aliquid sit minus neque earum expedita, minima, ratione eveniet hic aut quia perspiciatis eius illum? Autem, ex?</p>
+                <button class="see-more bg-blue-500 text-white px-4 py-2 rounded">See More →</button>
+            </div>
+            <div class="cart bg-white shadow-md p-4 rounded-lg">
+                <img src="../images and logos/New folder/istockphoto-1136637517-612x612.jpg" alt="Project 3">
+                <h3>Project 3</h3>
+                <p class="price">Estimated: $3000 - $7000</p>
+                <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, laborum repudiandae laudantium eligendi error esse accusantium suscipit provident doloribus magni, ut enim quam. Laudantium, libero adipisci officiis iusto sapiente maxime?</p>
+                <button class="see-more bg-blue-500 text-white px-4 py-2 rounded">See More →</button>
+            </div>
+            <div class="cart bg-white shadow-md p-4 rounded-lg">
+                <img src="../images and logos/New folder/istockphoto-1136637517-612x612.jpg" alt="Project 3">
+                <h3>Project 3</h3>
+                <p class="price">Estimated: $3000 - $7000</p>
+                <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil quaerat dolorum deleniti ut inventore natus dignissimos eveniet, beatae nisi ducimus, blanditiis rerum porro hic voluptates, omnis molestiae doloremque. Ad, dolores.</p>
+                <button class="see-more bg-blue-500 text-white px-4 py-2 rounded">See More →</button>
+            </div>
+            <div class="cart bg-white shadow-md p-4 rounded-lg">
+                <img src="../images and logos/New folder/istockphoto-1136637517-612x612.jpg" alt="Project 3">
+                <h3>Project 3</h3>
+                <p class="price">Estimated: $3000 - $7000</p>
+                <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias optio accusantium similique. Iste voluptate cumque hic itaque unde officia quasi repellat deserunt! Ex aliquid cum exercitationem accusamus quo, recusandae sint?</p>
+                <button class="see-more bg-blue-500 text-white px-4 py-2 rounded">See More →</button>
+            </div>
+            <div class="cart bg-white shadow-md p-4 rounded-lg">
+                <img src="../images and logos/New folder/istockphoto-1136637517-612x612.jpg" alt="Project 3">
+                <h3>Project 3</h3>
+                <p class="price">Estimated: $3000 - $7000</p>
+                <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quae sunt quam minima ad, maxime deserunt sed, provident fugit architecto, dolorum culpa hic id ea corporis! Ipsum voluptates quo pariatur?</p>
+                <button class="see-more bg-blue-500 text-white px-4 py-2 rounded">See More →</button>
+            </div>
+            <div class="cart bg-white shadow-md p-4 rounded-lg">
+                <img src="../images and logos/New folder/istockphoto-1136637517-612x612.jpg" alt="Project 3">
+                <h3>Project 3</h3>
+                <p class="price">Estimated: $3000 - $7000</p>
+                <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iste minima temporibus laboriosam debitis numquam, repellat sed? Excepturi pariatur tempora enim velit est praesentium aliquam. Quam repellat mollitia necessitatibus voluptates.</p>
+                <button class="see-more bg-blue-500 text-white px-4 py-2 rounded">See More →</button>
+            </div>
+            <div class="cart bg-white shadow-md p-4 rounded-lg">
+                <img src="../images and logos/New folder/photo-1460925895917-afdab827c52f.avif" alt="Project 3">
+                <h3>Project 3</h3>
+                <p class="price">Estimated: $3000 - $7000</p>
+                <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <button class="see-more bg-blue-500 text-white px-4 py-2 rounded">See More →</button>
+            </div>
+            <div class="cart bg-white shadow-md p-4 rounded-lg">
+                <img src="../images and logos/New folder/istockphoto-1136637517-612x612.jpg" alt="Project 3">
+                <h3>Project 3</h3>
+                <p class="price">Estimated: $3000 - $7000</p>
+                <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo voluptates molestiae nam magni consequatur quaerat, neque rerum ipsa aliquid cupiditate veritatis distinctio laboriosam similique vel consectetur magnam, porro aut nulla.</p>
+                <button class="see-more bg-blue-500 text-white px-4 py-2 rounded">See More →</button>
+            </div>
+            <div class="cart bg-white shadow-md p-4 rounded-lg">
+                <img src="../images and logos/New folder/istockphoto-1469706272-612x612.webp" alt="Project 3">
+                <h3>Project 3</h3>
+                <p class="price">Estimated: $3000 - $7000</p>
+                <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt eum laudantium ipsum, illum soluta enim nisi voluptates quas quisquam adipisci explicabo dignissimos incidunt reprehenderit deserunt quam repellat quibusdam ipsa voluptas?</p>
+                <button class="see-more bg-blue-500 text-white px-4 py-2 rounded">See More →</button>
+            </div>
+            <div class="cart bg-white shadow-md p-4 rounded-lg">
+                <img src="../images and logos/New folder/istockphoto-914851906-612x612.jpg" alt="Project 3">
+                <h3>Project 3</h3>
+                <p class="price">Estimated: $3000 - $7000</p>
+                <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci impedit nemo officiis. Consequuntur, ratione hic similique repudiandae fuga amet earum nulla facilis impedit reprehenderit voluptatibus! Fugiat totam commodi sequi dolores!</p>
+                <button class="see-more bg-blue-500 text-white px-4 py-2 rounded">See More →</button>
+            </div>
         </div>
     </div>
+
 </body>
 </html>
