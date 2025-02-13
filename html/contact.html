@@ -6,7 +6,6 @@
     <title>Three Column Layout</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
-
 </head>
 <body class="bg-gray-900 text-white">
 
@@ -23,111 +22,79 @@
         </div>
     </nav>
 
-    <!--section Layout -->
-    <div class="container mx-auto py-10 px-6 grid grid-cols-3 gap-6">
-
+    <!-- Responsive Three Column Layout -->
+    <div class="container mx-auto py-10 px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
         <!-- Column 1 -->
         <div class="flex flex-col justify-between">
-            <div>
-                <p class="text-white text-3xl font-semibold leading-loose text-center mt-10">projects templates</p>
-                <hr class="mx-auto border-white my-6  ">
-                <p class="text-white text-lg">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id suscipit nostrum pariatur architecto quis, rerum quos vero odit alias deserunt possimus officiis veritatis, amet quod ullam placeat dolore assumenda fuga magnam doloremque fugit totam, tempora at. Alias atque iure eveniet enim obcaecati iusto nesciunt corrupti nihil, dicta, recusandae mollitia, voluptatem voluptatum porro officiis praesentium. Iusto modi odit officiis laborum cum adipisci temporibus ipsam corrupti fugiat! Assumenda nemo in laborum? Molestias laudantium at, dolorem ut voluptate quaerat accusantium magnam ullam. Minus delectus expedita dolorem impedit excepturi, odio libero, ullam quia non aspernatur, eius itaque sequi. Asperiores, cumque! Atque consequuntur inventore fugit maxime sed ipsam, soluta deleniti neque recusandae ut vel ratione eaque nam exercitationem expedita culpa? Dolorum ipsum magni nisi ducimus incidunt ab esse harum corporis aliquam eos sint consequuntur, omnis, nesciunt impedit? Expedita adipisci quam necessitatibus, quasi nam ullam harum rerum, exercitationem deleniti tenetur assumenda illum commodi excepturi culpa, quisquam possimus nobis delectus temporibus unde iste obcaecati. Tempora, laudantium, distinctio iste, odio neque dolorem veritatis quia a mollitia optio corporis recusandae fugiat autem architecto. Laborum dolorem quam distinctio necessitatibus expedita voluptatibus voluptates a, ad ullam corrupti voluptatum nam ex atque animi nesciunt cumque eum rem soluta voluptas accusantium commodi unde nobis! Sunt sequi, minima aliquid quo cupiditate reiciendis commodi a!</p>
-                <hr class="border-white my-6">
-                <div class="flex space-x-6 text-white text-5xl justify-center">
-                    <i class="fab fa-html5 text-orange-500"></i>  
-                    <i class="fab fa-react text-blue-500"></i>    
-                    <i class="fas fa-code text-green-500"></i>   
-                </div>
-                <hr class="border-white my-6">
+            <p class="text-white text-3xl font-semibold text-center mt-10">Projects Templates</p>
+            <hr class="mx-auto border-white my-6">
+            <p class="text-white text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, praesentium. Temporibus amet dolores nisi architecto, sunt et obcaecati expedita fugit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora natus ipsum quis distinctio quod architecto repellendus vel recusandae iusto culpa, iure aut corrupti ab doloribus non, ut quos adipisci qui?...</p>
+            <hr class="border-white my-6">
+            <div class="flex space-x-6 text-white text-5xl justify-center">
+                <i class="fab fa-html5 text-orange-500"></i>  
+                <i class="fab fa-react text-blue-500"></i>    
+                <i class="fas fa-code text-green-500"></i>   
             </div>
-           
         </div>
-
+        
         <!-- Column 2 -->
-        <div class="grid grid-cols-1 gap-6 mt-6">
-            <!-- First Row -->
-            <div class="bg-white text-gray-900 p-6 rounded-lg shadow-lg flex justify-between items-center">
-                <div class="w-1/2">
+        <div class="grid grid-cols-1 gap-6">
+            <!-- Service Section -->
+            <div class="bg-white text-gray-900 p-6 rounded-lg shadow-lg flex flex-col md:flex-row justify-between items-center">
+                <div class="w-full md:w-1/2">
                     <h2 class="text-2xl font-bold mb-4">Our Services</h2>
-                    <p class="text-gray-700 mb-4">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
+                    <p class="text-gray-700 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     <button class="bg-black text-white px-6 py-2 rounded-lg">Contact</button>
                 </div>
-                <div class="w-1/2 flex justify-end">
-                    <img src="../images and logos/New folder/istockphoto-914851906-612x612.jpg" alt="Work Image" class="w-full max-w-xs rounded-lg shadow-lg">
+                <div class="w-full md:w-1/2 flex justify-end">
+                    <img src="../New folder/slider-1.avif" alt="Work Image" class="w-full max-w-xs rounded-lg shadow-lg">
                 </div>
+                
             </div>
 
-            <!-- second section -->
-            <div class="bg-white p-6 rounded-lg shadow-lg h-85">
-                <div class="grid grid-cols-3 gap-6 mt-4">
-                    <!-- Cards -->
-                    
-                    <div class="bg-gray-200 p-4 rounded-lg shadow-lg w-30 h-50">
-                        <img src="../images and logos/New folder/istockphoto-1076517644-612x612.jpg" alt="Work Image 1" class="w-full h-40 object-cover rounded-lg">
+            <!-- Image Grid -->
+            <div class="bg-white p-4 rounded-lg shadow-lg shadow-blue-300 h-69 mt-1">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-10 ">
+                    <div class="bg-gray-200 p-4 rounded-lg shadow-lg mt-10">
+                        <img src="../new folder-1/finaal-1.jpg" alt="Work Image-1" class="w-full h-40 object-cover rounded-lg">
                         <p class="text-gray-700 mt-2 text-center">Lorem ipsum dolor.</p>
                     </div>
-                    <div class="bg-gray-200 p-4 rounded-lg shadow-lg">
-                        <img src="../images and logos/New folder/istockphoto-1136637517-612x612.jpg" alt="Work Image 2" class="w-full h-40 object-cover rounded-lg">
+                    <div class="bg-gray-200 p-4 rounded-lg shadow-lg mt-10">
+                        <img src="../new folder-1/istockphoto-1136637517-612x612.jpg" alt="Work Image 2" class="w-full h-40 object-cover rounded-lg">
                         <p class="text-gray-700 mt-2 text-center">Lorem ipsum dolor.</p>
                     </div>
-                    <div class="bg-gray-200 p-4 rounded-lg shadow-lg">
-                        <img src="../images and logos/New folder/istockphoto-1166242152-612x612.jpg" alt="Work Image 3" class="w-full h-40 object-cover rounded-lg">
+                    <div class="bg-gray-200 p-4 rounded-lg shadow-lg mt-10">
+                        <img src="../new folder-1/istockphoto-1469706272-612x612.webp "alt="Work Image -3" class="w-full h-40 object-cover rounded-lg">
                         <p class="text-gray-700 mt-2 text-center">Lorem ipsum dolor.</p>
                     </div>
-                    <div class="bg-gray-200 p-4 rounded-lg shadow-lg">
-                        <img src="../images and logos/New folder/istockphoto-1253430957-2048x2048.jpg" alt="Work Image 4" class="w-full h-40 object-cover rounded-lg">
-                        <p class="text-gray-700 mt-2 text-center">Lorem ipsum dolor.</p>
-                    </div>
-                    <div class="bg-gray-200 p-4 rounded-lg shadow-lg">
-                        <img src="../images and logos/New folder/istockphoto-1469706272-612x612.webp" alt="Work Image 5" class="w-full h-40 object-cover rounded-lg">
-                        <p class="text-gray-700 mt-2 text-center">Lorem ipsum dolor.</p>
-                    </div>
-                    <div class="bg-gray-200 p-4 rounded-lg shadow-lg">
-                        <img src="../images and logos/New folder/istockphoto-1166242152-612x612.jpg" alt="Work Image 6" class="w-full h-40 object-cover rounded-lg">
-                        <p class="text-gray-700 mt-2 text-center">Lorem ipsum dolor.</p>
-                    </div>
+                    <button class="bg-blue-500 border border-gray-700 rounded-lg shadow-lg shadow-blue-300 pl-4 ml-6 "> Enter <i class="fas fa-arrow-right"></i>
+                    </button>
                 </div>
             </div>
         </div>
-
-    
-         <!-- Column 3 -->
-<div class=" py-10 rounded-lg shadow-lg">
-
-    <!-- First Section (Smaller) -->
-    <div class="bg-white p-10 rounded-lg shadow-lg flex justify-center items-center mb-10">
-        <div class="flex w-full gap-6">
-            
-            <!-- Left Div -->
-            <div class="w-1/2 text-center py-10">
-                <img src="images/left1.jpg" alt="Left Image 1" class="w-full h-40 object-cover rounded-lg">
-                <p class="text-gray-700 mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-
-            <!-- Right Div -->
-            <div class="w-1/2 text-center">
-                <img src="images/right1.jpg" alt="Right Image 2" class="w-full h-40 object-cover rounded-lg">
-                <p class="text-gray-700 mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-
-        </div>
-    </div>
-
-
-    <div class="mt-4"></div> 
-    <!-- Second Section (Larger) -->
-    <div class="bg-white p-8 rounded-lg shadow-lg flex justify-center items-center h-[150px] sm:h-[200px] lg:h-[250px] mt-6">
-        <div class="text-center">
-            <img src="images/main.jpg" alt="Main Image" class="w-full max-w-sm h-40 object-cover rounded-lg mx-auto">
-            <p class="text-gray-700 mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque nisl ut magna feugiat, eu luctus ipsum congue.</p>
-        </div>
-    </div>
-
-</div>
-
         
-
+        <!-- Column 3 -->
+        <div class="py-10 rounded-lg shadow-lg">
+            <div class="bg-white p-10 rounded-lg shadow-lg">
+                <div class="flex flex-col sm:flex-row gap-6">
+                    <div class="w-full sm:w-1/2 text-center py-10">
+                        <img src="../new folder-1/istockphoto-1504929133-612x612.jpg" alt="Left Image" class="w-full h-40 object-cover rounded-lg">
+                        <p class="text-gray-700 mt-4">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="w-full sm:w-1/2 text-center">
+                        <img src="../new folder-1/istockphoto-657449394-612x612.jpg" alt="Right Image" class="w-full h-40 object-cover rounded-lg">
+                        <p class="text-gray-700 mt-4">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white p-8 rounded-lg shadow-lg mt-6">
+                <div class="text-center">
+                    <img src="../new folder-1/photo-1519389950473-47ba0277781c.avif" alt="Main Image" class="w-full max-w-sm h-40 object-cover rounded-lg mx-auto">
+                    <p class="text-gray-700 mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
